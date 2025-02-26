@@ -10,6 +10,7 @@
 namespace App\Http\Middleware\General;
 use Cache;
 use Closure;
+use Illuminate\Support\Facades\File;
 
 class General {
 
@@ -237,39 +238,38 @@ class General {
      * @return void
      */
     private function setLanguage() {
-
-        //set default system language first
+        // Set default system language
         $lang = config('system.settings_system_language_default');
-        if (file_exists(resource_path("lang/$lang"))) {
-            //for use by javascripts - like tinymce (set in the header)
+        
+        if (File::exists(resource_path("lang/$lang"))) {
             request()->merge([
                 'system_language' => $lang,
             ]);
             \App::setLocale($lang);
         } else {
-            //for use by javascripts - like tinymce (set in the header)
             request()->merge([
-                'system_language' => 'english',
+                'system_language' => 'en',
             ]);
-            //revert to english
-            \App::setLocale('english');
+            \App::setLocale('en');
         }
-
-        //set users language (if app settings allow it)
-        if (auth()->check() && config('system.settings_system_language_allow_users_to_change') == 'yes') {
-            $lang = auth()->user()->pref_language;
-            if (file_exists(resource_path("lang/$lang"))) {
-                \App::setLocale($lang);
+    
+        // Set user language (if allowed)
+        if (auth()->check() && config('system.settings_system_language_allow_users_to_change') === 'yes') {
+            $userLang = auth()->user()->pref_language;
+            if (File::exists(resource_path("lang/$userLang"))) {
+                \App::setLocale($userLang);
             }
         }
-
-        //create list of languages
-        $dir = BASE_DIR . '/application/resources/lang';
-        $languages = array_diff(scandir($dir), array('..', '.'));
+    
+        // Ensure `lang/` directory exists before scanning
+        $dir = resource_path('lang');
+        $languages = is_dir($dir) ? array_diff(scandir($dir), ['..', '.']) : [];
+    
         request()->merge([
             'system_languages' => $languages,
         ]);
     }
+    
 
     /**
      * check if user has a running timer
