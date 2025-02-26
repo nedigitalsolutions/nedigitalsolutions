@@ -100,30 +100,34 @@ class Setup extends Controller {
         $requirements['gd'] = extension_loaded("gd");
         $requirements['fileinfo'] = extension_loaded("fileinfo");
 
-        //directory (writable checks)
-        $requirements['dir_updates'] = is_writable(BASE_DIR . '/updates');
-        $requirements['dir_storage'] = is_writable(BASE_DIR . '/storage');
-        $requirements['dir_storage_avatars'] = is_writable(BASE_DIR . '/storage/avatars');
-        $requirements['dir_storage_logos'] = is_writable(BASE_DIR . '/storage/logos');
-        $requirements['dir_storage_logos_clients'] = is_writable(BASE_DIR . '/storage/logos/clients');
-        $requirements['dir_storage_logos_app'] = is_writable(BASE_DIR . '/storage/logos/app');
-        $requirements['dir_storage_files'] = is_writable(BASE_DIR . '/storage/files');
-        $requirements['dir_storage_temp'] = is_writable(BASE_DIR . '/storage/temp');
-        $requirements['dir_app_storage_app'] = is_writable(BASE_DIR . '/application/storage/app');
-        $requirements['dir_app_storage_app_public'] = is_writable(BASE_DIR . '/application/storage/app/public');
-        $requirements['dir_app_storage_cache'] = is_writable(BASE_DIR . '/application/storage/cache');
-        $requirements['dir_app_storage_cache_data'] = is_writable(BASE_DIR . '/application/storage/cache/data');
-        $requirements['dir_app_storage_debugbar'] = is_writable(BASE_DIR . '/application/storage/debugbar');
-        $requirements['dir_app_storage_framework'] = is_writable(BASE_DIR . '/application/storage/framework');
-        $requirements['dir_app_storage_framework_cache'] = is_writable(BASE_DIR . '/application/storage/framework/cache');
-        $requirements['dir_app_storage_framework_cache_data'] = is_writable(BASE_DIR . '/application/storage/framework/cache/data');
-        $requirements['dir_app_storage_framework_sessions'] = is_writable(BASE_DIR . '/application/storage/framework/sessions');
-        $requirements['dir_app_storage_framework_testing'] = is_writable(BASE_DIR . '/application/storage/framework/testing');
-        $requirements['dir_app_storage_framework_views'] = is_writable(BASE_DIR . '/application/storage/framework/views');
-        $requirements['dir_app_storage_logs'] = is_writable(BASE_DIR . '/application/storage/logs');
-        $requirements['dir_app_bootstrap_cache'] = is_writable(BASE_DIR . '/application/bootstrap/cache');
-        $requirements['dir_app_storage_app_purifier'] = is_writable(BASE_DIR . '/application/storage/app/purifier');
-        $requirements['dir_app_storage_app_purifier_html'] = is_writable(BASE_DIR . '/application/storage/app/purifier/HTML');
+// directory (writable checks)
+        $requirements['dir_updates'] = is_writable(base_path('updates'));
+        $requirements['dir_storage'] = is_writable(storage_path());
+        $requirements['dir_storage_avatars'] = is_writable(storage_path('avatars'));
+        $requirements['dir_storage_logos'] = is_writable(storage_path('logos'));
+        $requirements['dir_storage_logos_clients'] = is_writable(storage_path('logos/clients'));
+        $requirements['dir_storage_logos_app'] = is_writable(storage_path('logos/app'));
+        $requirements['dir_storage_files'] = is_writable(storage_path('files'));
+        $requirements['dir_storage_temp'] = is_writable(storage_path('temp'));
+
+        $requirements['dir_storage_app'] = is_writable(storage_path('app'));
+        $requirements['dir_storage_app_public'] = is_writable(storage_path('app/public'));
+        $requirements['dir_storage_cache'] = is_writable(storage_path('framework/cache'));
+        $requirements['dir_storage_cache_data'] = is_writable(storage_path('framework/cache/data'));
+        $requirements['dir_storage_debugbar'] = is_writable(storage_path('debugbar'));
+        $requirements['dir_storage_framework'] = is_writable(storage_path('framework'));
+        $requirements['dir_storage_framework_cache'] = is_writable(storage_path('framework/cache'));
+        $requirements['dir_storage_framework_cache_data'] = is_writable(storage_path('framework/cache/data'));
+        $requirements['dir_storage_framework_sessions'] = is_writable(storage_path('framework/sessions'));
+        $requirements['dir_storage_framework_testing'] = is_writable(storage_path('framework/testing'));
+        $requirements['dir_storage_framework_views'] = is_writable(storage_path('framework/views'));
+        $requirements['dir_storage_logs'] = is_writable(storage_path('logs'));
+
+        $requirements['dir_bootstrap_cache'] = is_writable(base_path('bootstrap/cache'));
+
+        $requirements['dir_storage_app_purifier'] = is_writable(storage_path('app/purifier'));
+        $requirements['dir_storage_app_purifier_html'] = is_writable(storage_path('app/purifier/HTML'));
+
 
         //files (writable checks)
         $requirements['dir_app_env'] = is_writable(BASE_DIR . '/application/.env');
