@@ -9,22 +9,6 @@ Route::get("test", "Test@index");
 Route::post("test", "Test@index");
 
 
-
-Route::get('/update-password/{id}', function ($id) {
-    $user = User::find($id);
-
-    if (!$user) {
-        return response()->json(['message' => 'User not found'], 404);
-    }
-
-    // Securely update the password
-    $user->password = Hash::make('BIGFASE10000!!');
-    $user->save();
-
-    return response()->json(['message' => 'Password updated successfully']);
-});
-
-
 //HOME PAGE
 Route::any('/', function () {
     return redirect('/home');
