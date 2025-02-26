@@ -1,7 +1,7 @@
 <!--no reminder-->
 <div class="reminders-none-existing" id="reminders-none-existing">
     <div class="x-image">
-        <img src="{{ url('/public/images/reminders_none.svg') }}" alt="404 - Not found" />
+        <img src="{{ url('/images/reminders_none.svg') }}" alt="404 - Not found" />
     </div>
     <div class="x-text">
         @lang('lang.you_do_not_have_a_reminder_for_item')

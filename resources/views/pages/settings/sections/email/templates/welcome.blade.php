@@ -8,7 +8,7 @@
     <div class="row">
         <div class="col-12">
             <div class="page-notification-imaged">
-                <img src="{{ url('/') }}/public/images/email.png" alt="Application Settings" />
+                <img src="{{ url('/') }}/images/email.png" alt="Application Settings" />
                 <div class="message">
                     <h4>{{ cleanLang(__('lang.select_email_template_from_dropdown')) }}</h2>
                 </div>

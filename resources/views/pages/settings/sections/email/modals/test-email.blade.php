@@ -1,7 +1,7 @@
 <div id="test-email-form">
     @if($show == 'form')
     <div class="splash-image">
-        <img src="{{ url('/') }}/public/images/send-email.svg" alt="{{ cleanLang(__('lang.send_test_email')) }}" />
+        <img src="{{ url('/') }}/images/send-email.svg" alt="{{ cleanLang(__('lang.send_test_email')) }}" />
     </div>
     <div class="splash-text">
         <h4>{{ cleanLang(__('lang.send_test_email')) }}</h4>
@@ -15,7 +15,7 @@
     </div>
     @else
     <div class="splash-image">
-        <img src="{{ url('/') }}/public/images/general-error.png" alt="{{ cleanLang(__('lang.error')) }}" />
+        <img src="{{ url('/') }}/images/general-error.png" alt="{{ cleanLang(__('lang.error')) }}" />
     </div>
     <div class="splash-text">
         <div class="alert alert-danger">{{ cleanLang(__('lang.cronjob_and_emails')) }}</div>

@@ -1,7 +1,7 @@
 @extends('layout.wrapper') @section('content')
 
 <!--javascript-->
-<script src="public/js/core/messages.js?v={{ config('system.versioning') }}"></script>
+<script src="js/core/messages.js?v={{ config('system.versioning') }}"></script>
 
 <!-- main content -->
 <div class="container-fluid">

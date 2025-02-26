@@ -10,7 +10,7 @@
                     data-ajax-type="post" data-loading-target="chat-messages-container"
                     data-message-target="team" data-progress-bar="hidden"
                     data-counter-id="messages_counter_team" data-url="{{ url('/messages/feed?action=load') }}">
-                    <img src="{{ url('public/images/team.png') }}" alt="user-img" class="img-circle">
+                    <img src="{{ url('images/team.png') }}" alt="user-img" class="img-circle">
                     <span>@lang('lang.team')
                         <small class="text-info messages_user_status text-lc">@lang('lang.all_team_members')
                             <!--counter-->

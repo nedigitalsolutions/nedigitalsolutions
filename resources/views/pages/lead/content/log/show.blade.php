@@ -14,7 +14,7 @@
 @else
 
 <div class="x-no-result">
-    <img src="{{ url('/') }}/public/images/no-download-avialble.png" alt="404 - Not found" /> 
+    <img src="{{ url('/') }}/images/no-download-avialble.png" alt="404 - Not found" /> 
     <div class="p-t-20"><h4>{{ cleanLang(__('lang.you_do_not_have_logs')) }}</h4></div>
     <div class="p-t-10">
         <a href="{{ url('app/settings/customfields/leads') }}" class="btn btn-info btn-sm">@lang('lang.record_new_log')</a>

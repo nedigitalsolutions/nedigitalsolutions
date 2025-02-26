@@ -37,7 +37,7 @@
 @else
 
 <div class="x-no-result">
-    <img src="{{ url('/') }}/public/images/no-download-avialble.png" alt="404 - Not found" /> 
+    <img src="{{ url('/') }}/images/no-download-avialble.png" alt="404 - Not found" /> 
     <div class="p-t-20"><h4>{{ cleanLang(__('lang.you_do_not_have_custom_fields')) }}</h4></div>
     @if(auth()->user()->is_admin)
     <div class="p-t-10">

@@ -80,7 +80,7 @@
 @if($reminders->count() == 0)
 <div class="reminders-none-existing" id="reminders-none-existing">
     <div class="x-image m-t-50 text-center p-t-30">
-        <img class="w-px-250" src="{{ url('/public/images/reminders_none.svg') }}" alt="404 - Not found" />
+        <img class="w-px-250" src="{{ url('/images/reminders_none.svg') }}" alt="404 - Not found" />
     </div>
     <div class="x-text m-t-30 text-center">
         <h4>@lang('lang.no_reminders_found')</h4>
