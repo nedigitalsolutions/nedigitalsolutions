@@ -13,16 +13,16 @@
     <base href="{{ url('/') }}" target="_self">
 
     <!--JQUERY & OTHER HEADER JS-->
-    <script src="public/vendor/js/vendor.header.js?v={{ config('system.versioning') }}"></script>
+    <script src="vendor/js/vendor.header.js?v={{ config('system.versioning') }}"></script>
 
     <!--BOOTSTRAP-->
-    <link href="public/vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
 
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-    <script src="public/vendor/js/html5shiv/html5shiv.js"></script>
-    <script src="public/vendor/js/respond/respond.min.js"></script>
+    <script src="vendor/js/html5shiv/html5shiv.js"></script>
+    <script src="vendor/js/respond/respond.min.js"></script>
     <![endif]-->
 
     <!--GOOGLE FONTS-->
@@ -35,12 +35,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <!--VENDORS CSS-->
-    <link rel="stylesheet" href="/public/vendor/css/vendor.css?v={{ config('system.versioning') }}">
+    <link rel="stylesheet" href="/vendor/css/vendor.css?v={{ config('system.versioning') }}">
     <link rel="stylesheet"
-        href="/public/vendor/js/bootstrap-timepicker/bootstrap-timepicker.css?v={{ config('system.versioning') }}">
+        href="/vendor/js/bootstrap-timepicker/bootstrap-timepicker.css?v={{ config('system.versioning') }}">
 
     <!--ICONS-->
-    <link rel="stylesheet" href="public/vendor/fonts/growcrm-icons/styles.css?v={{ config('system.versioning') }}">
+    <link rel="stylesheet" href="vendor/fonts/growcrm-icons/styles.css?v={{ config('system.versioning') }}">
 
 
     <!--DYNAMIC CSS VARS-->
@@ -84,12 +84,12 @@
     <!--THEME STYLE-->
     <!--use the default theme for all external pages (e.g. proposals, cotracts etc) -->
     @if(config('visibility.external_view_use_default_theme'))
-    <link href="public/themes/default/css/style.css?v={{ config('system.settings_system_javascript_versioning') }}"
+    <link href="themes/default/css/style.css?v={{ config('system.settings_system_javascript_versioning') }}"
         rel="stylesheet">
     @else
     @if(auth()->check())
     <link
-        href="public/themes/{{ auth()->user()->pref_theme }}/css/style.css?v={{ config('system.settings_system_javascript_versioning') }}"
+        href="themes/{{ auth()->user()->pref_theme }}/css/style.css?v={{ config('system.settings_system_javascript_versioning') }}"
         rel="stylesheet">
     @else
     <link href="{{ config('theme.selected_theme_css') }} " rel="stylesheet">
@@ -97,27 +97,27 @@
     @endif
 
     <!--USERS CUSTON CSS FILE-->
-    <link href="public/css/custom.css?v={{ config('system.versioning') }}" rel="stylesheet">
+    <link href="css/custom.css?v={{ config('system.versioning') }}" rel="stylesheet">
 
     <!--PRINTING CSS-->
-    <link href="public/css/print.css?v={{ config('system.versioning') }}" rel="stylesheet">
+    <link href="css/print.css?v={{ config('system.versioning') }}" rel="stylesheet">
 
     <!-- Favicon icon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="public/images/favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="public/images/favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="public/images/favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="public/images/favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="public/images/favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="public/images/favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="public/images/favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="public/images/favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="public/images/favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="public/images/favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="public/images/favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="public/images/favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
     <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="public/images/favicon/ms-icon-144x144.png">
+    <meta name="msapplication-TileImage" content="images/favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
 
@@ -212,7 +212,7 @@
     </script>
 
     <!--boot js-->
-    <script src="public/js/core/head.js?v={{ config('system.versioning') }}"></script>
+    <script src="js/core/head.js?v={{ config('system.versioning') }}"></script>
 
     <!--stripe payments js-->
     @if(@config('visibility.stripe_js'))
@@ -235,8 +235,8 @@
     @endif
 
     <!--code mirror (css editor)-->
-    <link rel="stylesheet" href="/public/js/codemirror/codemirror.min.css?v={{ config('system.versioning') }}">
-    <link rel="stylesheet" href="/public/js/codemirror/darcula.min.css?v={{ config('system.versioning') }}">
+    <link rel="stylesheet" href="/js/codemirror/codemirror.min.css?v={{ config('system.versioning') }}">
+    <link rel="stylesheet" href="/js/codemirror/darcula.min.css?v={{ config('system.versioning') }}">
 
     <!--[modules] css includes-->
     {!! config('css.modules') !!}
