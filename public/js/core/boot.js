@@ -33,7 +33,7 @@ function NXbootstrap($self, action) {
     NX.varInitialProjectProgress = 0;
 
     //because we have added tinymce in common vendor.js - we must sent paths for it to use
-    tinyMCE.baseURL = NX.site_url + "/public/vendor/js/tinymce";
+    tinyMCE.baseURL = NX.site_url + "/vendor/js/tinymce";
     tinyMCE.suffix = '.min';
 
 
@@ -883,11 +883,11 @@ function nxTinyMCEDocuments(tinyMCEHeight = 800, tinyMCESelector = '.tinymce-doc
         autoresize_min_height: tinyMCEHeight,
         document_base_url: NX.site_url,
         content_css: [
-            "/public/vendor/css/bootstrap/bootstrap.min.css",
+            "/vendor/css/bootstrap/bootstrap.min.css",
             "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap",
-            "/public/vendor/fonts/growcrm-icons/styles.css",
-            "/public/themes/default/css/style.css",
-            "/public/documents/css/tinymce.css",
+            "/vendor/fonts/growcrm-icons/styles.css",
+            "/themes/default/css/style.css",
+            "/documents/css/tinymce.css",
         ],
         plugins: [
             "fullscreen image paste link code media codesample autoresize",

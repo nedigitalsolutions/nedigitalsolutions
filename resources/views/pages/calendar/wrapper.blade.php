@@ -1,7 +1,7 @@
 @extends('layout.wrapper') @section('content')
 
 <!--calender js [nextloop]-->
-<script src="/public/js/calendar/calendar.js?v={{ config('system.versioning') }}"></script>
+<script src="/js/calendar/calendar.js?v={{ config('system.versioning') }}"></script>
 
 <!-- main content -->
 <div class="container-fluid">

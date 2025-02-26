@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-body">
                     <div class="page-notification">
-                        <img class="m-b-30" src="{{ url('/') }}/public/images/404.png" alt="404 - Not found" /> 
+                        <img class="m-b-30" src="{{ url('/') }}/images/404.png" alt="404 - Not found" /> 
                         <h2  class="m-b-30 font-weight-200"> {{ $error['message'] ?? '' }} </h2>
                     </div>
                 </div>

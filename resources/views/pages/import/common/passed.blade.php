@@ -1,6 +1,6 @@
 <!--importing results-->
 <div class="importing-step-3" id="importing-step-3">
-    <div class="x-splash-image"><img src="{{ url('public/images/import-results-passed.svg') }}"
+    <div class="x-splash-image"><img src="{{ url('images/import-results-passed.svg') }}"
             alt="importing completed" /></div>
     <div class="x-splash-text">
         <h3>@lang('lang.importing_completed')</h3>

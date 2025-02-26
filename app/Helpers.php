@@ -2440,7 +2440,7 @@ function getCoverImage($directory = '', $filename = '', $type = 'background') {
     }
 
     //default placeholder cover
-    return "style=\"background-image: url('public/images/placeholder.jpg')\"";
+    return "style=\"background-image: url('images/placeholder.jpg')\"";
 }
 
 /**
@@ -2635,12 +2635,12 @@ function getDocumentHeroImage($directory = '', $filename = '', $updated = 'no', 
 
     //default placeholder cover
     if ($type == 'proposal') {
-        return "style=\"background-image: url('public/documents/images/default-background.jpg')\"";
+        return "style=\"background-image: url('documents/images/default-background.jpg')\"";
     }
 
     //default placeholder cover
     if ($type == 'contract') {
-        return "style=\"background-image: url('public/documents/images/default-background-contracts.jpg')\"";
+        return "style=\"background-image: url('documents/images/default-background-contracts.jpg')\"";
     }
 
 }

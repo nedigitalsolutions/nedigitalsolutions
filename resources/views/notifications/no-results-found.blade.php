@@ -1,5 +1,5 @@
 <div class="page-notification">
-    <img src="{{ url('/') }}/public/images/no-results-found.png" alt="404" /> 
+    <img src="{{ url('/') }}/images/no-results-found.png" alt="404" /> 
     @if (isset($page['no_results_message']) && $page['no_results_message'])
     <!--sepcified-->
     <div class="title">{{ $page['no_results_message'] ?? '' }}</div>

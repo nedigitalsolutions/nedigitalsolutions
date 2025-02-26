@@ -79,10 +79,10 @@ if (version_compare(PHP_VERSION, '8.2', ">=")) {
 
 //page - general
 $page = '
-<!DOCTYPE html><html lang="en" class="team"><head><link href="public/vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet"><link href="public/themes/default/css/style.css" rel="stylesheet"><link rel="stylesheet" href="public/vendor/css/vendor.css"></head>
+<!DOCTYPE html><html lang="en" class="team"><head><link href="vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet"><link href="themes/default/css/style.css" rel="stylesheet"><link rel="stylesheet" href="vendor/css/vendor.css"></head>
 <body class="setup-prechecks"><div class="x-wrapper w-90 max-width-1000">
 <div class="col-12 p-t-40 card-no-border"><div class="card"><div class="card-body"><div class="text-center"><h3 class="card-title">GROW CRM</h3>
-<h5>System Check</h5><div><img src="public/images/system-checks.png" width="300" alt="system checks failed" /></div><p class="card-text">The following (minimum system requirements) must be met before you can continue. See <a href="https://growcrm.io/documentation/2-installation/" target="_blank">documentation</a> for details.</p>
+<h5>System Check</h5><div><img src="images/system-checks.png" width="300" alt="system checks failed" /></div><p class="card-text">The following (minimum system requirements) must be met before you can continue. See <a href="https://growcrm.io/documentation/2-installation/" target="_blank">documentation</a> for details.</p>
 </div><div class="m-t-20">';
 
 //page - php

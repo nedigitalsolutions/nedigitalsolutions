@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-12">
             <div class="permision-denied">
-                <img src="{{ url('/') }}/public/images/404.png" alt="404 - Not found" /> 
+                <img src="{{ url('/') }}/images/404.png" alt="404 - Not found" /> 
                 <div class="x-message"><h2>{{ $error['message'] ?? __('lang.error_not_found') }}</h2></div>
             </div>
         </div>

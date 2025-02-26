@@ -9,7 +9,7 @@
     <div class="row">
         <div class="col-12">
             <div class="permision-denied">
-                <img src="{{ url('/') }}/public/images/permission-denied.png" alt="permission denied" /> 
+                <img src="{{ url('/') }}/images/permission-denied.png" alt="permission denied" /> 
                 <div class="x-message"><h2>{{ cleanLang(__('lang.error_no_permission_for_resource')) }}</h2></div>
             </div>
         </div>

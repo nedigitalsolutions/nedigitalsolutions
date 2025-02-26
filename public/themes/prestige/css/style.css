@@ -11732,7 +11732,7 @@ html body .page-wrapper {
 }
 .loader-loading:after {
   content: " ";
-  background-image: url(/public/images/loading.gif);
+  background-image: url(/images/loading.gif);
   display: inline-block;
   width: 120px;
   height: 40px;
@@ -11753,7 +11753,7 @@ html body .page-wrapper {
 }
 .loading-placeholder:after {
   content: " ";
-  background-image: url(/public/images/loading-small.gif);
+  background-image: url(/images/loading-small.gif);
   display: inline-block;
   width: 60px;
   height: 25px;
@@ -11771,7 +11771,7 @@ html body .page-wrapper {
 }
 .loading:after {
   content: " ";
-  background-image: url(/public/images/loading.gif);
+  background-image: url(/images/loading.gif);
   display: inline-block;
   width: 80px;
   height: 25px;
@@ -11787,7 +11787,7 @@ html body .page-wrapper {
 }
 .loading-before:before {
   content: " ";
-  background-image: url(/public/images/loading.gif);
+  background-image: url(/images/loading.gif);
   display: inline-block;
   width: 80px;
   height: 25px;
@@ -11803,7 +11803,7 @@ html body .page-wrapper {
 }
 .loading-before-centre:before {
   content: " ";
-  background-image: url(/public/images/loading.gif);
+  background-image: url(/images/loading.gif);
   display: inline-block;
   width: 80px;
   height: 25px;
@@ -11819,7 +11819,7 @@ html body .page-wrapper {
 }
 .loading-tabs:before {
   content: " ";
-  background-image: url(/public/images/loading.gif);
+  background-image: url(/images/loading.gif);
   display: inline-block;
   width: 80px;
   height: 25px;
@@ -15164,13 +15164,13 @@ div.boards::-webkit-scrollbar {
  * LOGIN
  * --------------------------------------------------------*/
 .login.signin {
-  background-image: url("/public/images/login-register.jpg");
+  background-image: url("/images/login-register.jpg");
 }
 .login.signup {
-  background-image: url("/public/images/login-register.jpg");
+  background-image: url("/images/login-register.jpg");
 }
 .login.forgotpassword {
-  background-image: url("/public/images/login-register.jpg");
+  background-image: url("/images/login-register.jpg");
 }
 
 .relogin {

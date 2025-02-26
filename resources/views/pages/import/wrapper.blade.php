@@ -12,17 +12,17 @@
 
 
         <div class="import-payload-preview hidden p-r-30" id="import-payload-preview-csv">
-            <a><img src="{{ url('public/images/file-icons/icon-csv.svg') }}" alt="CSV FILE" />
+            <a><img src="{{ url('images/file-icons/icon-csv.svg') }}" alt="CSV FILE" />
             </a>
         </div>
 
         <div class="import-payload-preview hidden p-r-30" id="import-payload-preview-xls">
-            <a><img src="{{ url('public/images/file-icons/icon-xls.svg') }}" alt="XLS FILE" />
+            <a><img src="{{ url('images/file-icons/icon-xls.svg') }}" alt="XLS FILE" />
             </a>
         </div>
 
         <div class="import-payload-preview hidden p-r-30" id="import-payload-preview-xlsx">
-            <a><img src="{{ url('public/images/file-icons/icon-xlsx.svg') }}" alt="CSV FILE" />
+            <a><img src="{{ url('images/file-icons/icon-xlsx.svg') }}" alt="CSV FILE" />
             </a>
         </div>
 

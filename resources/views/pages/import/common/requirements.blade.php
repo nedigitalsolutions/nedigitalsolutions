@@ -1,7 +1,8 @@
 <div class="importing-requirements">
 
     <div class="splash-image">
-        <img src="{{ url('/') }}/public/images/system-checks.png" alt="404 - Not found" />
+        <img src="{{ url('/') }}/
+images/system-checks.png" alt="404 - Not found" />
     </div>
     <div class="splash-text">
         @lang('lang.server_requirements_to_use_feature')

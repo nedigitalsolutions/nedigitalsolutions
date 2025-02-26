@@ -18,10 +18,10 @@
 
     @if(request('view') == 'preview')
     <base href="{{ url('/') }}" target="_self">
-    <link href="public/vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     @else
     <base href="" target="_self">
-    <link href="{{ BASE_DIR }}/public/vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link href="{{ BASE_DIR }}/vendor/css/bootstrap/bootstrap.min.css" rel="stylesheet">
     @endif
 
     <!-- dompdf font - regular latin characters-->
@@ -200,7 +200,7 @@
     {!! customDPFCSS(config('system.settings2_bills_pdf_css')) !!}
 
     <!-- Favicon icon -->
-    <link rel="icon" type="image/png" sizes="16x16" href="public/images/favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
 </head>
 
 <body class="pdf-page">

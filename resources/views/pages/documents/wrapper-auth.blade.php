@@ -39,5 +39,5 @@
 </div>
 
 <!--boot js-->
-<script src="public/js/core/docs.js?v={{ config('system.versioning') }}"></script>
+<script src="js/core/docs.js?v={{ config('system.versioning') }}"></script>
 @endsection

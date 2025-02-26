@@ -1,6 +1,6 @@
 <!--importing results-->
 <div class="importing-step-3" id="importing-step-3">
-    <div class="x-splash-image"><img src="{{ url('public/images/import-results-nothing.svg') }}"
+    <div class="x-splash-image"><img src="{{ url('images/import-results-nothing.svg') }}"
             alt="importing completed" /></div>
     <div class="x-splash-text">
         <h3>@lang('lang.no_data_rows_were_found')</h3>

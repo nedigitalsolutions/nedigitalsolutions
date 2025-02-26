@@ -6,7 +6,7 @@
             <div class="modal-body relogin" id="reloginModalBody">
 
                 <div class="splash-image">
-                    <img src="{{ url('/') }}/public/images/relogin.png" alt="404 - Not found" />
+                    <img src="{{ url('/') }}/images/relogin.png" alt="404 - Not found" />
                 </div>
                 <div class="splash-text">
                     {{ cleanLang(__('lang.session_timed_out_login')) }}

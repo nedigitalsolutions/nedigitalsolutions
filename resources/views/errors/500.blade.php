@@ -6,7 +6,7 @@
     <div class="row">
         <div class="col-12">
             <div class="permision-denied">
-                <img src="{{ url('/') }}/public/images/server-error.png" alt="permission denied" /> 
+                <img src="{{ url('/') }}/images/server-error.png" alt="permission denied" /> 
                 <div class="x-message"><h2>{{ cleanLang(__('lang.application_error')) }}</h2></div>
             </div>
         </div>

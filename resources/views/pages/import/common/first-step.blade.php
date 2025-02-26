@@ -4,10 +4,10 @@
     <!--splash images-->
     <div class="x-splash-images">
         <span class="x-icons">
-            <img src="{{ url('public/images/file-icons/icon-csv.svg') }}" alt="CSV FILE" />
+            <img src="{{ url('images/file-icons/icon-csv.svg') }}" alt="CSV FILE" />
         </span>
         <span class="x-icons">
-            <img src="{{ url('public/images/file-icons/icon-xlsx.svg') }}" alt="XLSX FILE" />
+            <img src="{{ url('images/file-icons/icon-xlsx.svg') }}" alt="XLSX FILE" />
         </span>
     </div>
 
