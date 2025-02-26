@@ -17,7 +17,7 @@ class AppServiceProvider extends ServiceProvider {
 
         //[growcrm] disable debug bar in production mode
         if (!env('APP_DEBUG_TOOLBAR')) {
-            \Debugbar::disable();
+            //\Debugbar::disable();
         }
 
         //[growcrm] force SSL rul's
