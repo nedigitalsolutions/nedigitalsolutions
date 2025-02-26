@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\File;
+
 /**
  * [STANDALONE] & [SAAS]
  * Bootstrap the application services.
@@ -288,55 +290,55 @@ function middlewareBootTheme() {
     $settings = \App\Models\Settings::find(1);
 
     //get all directories in themes folder
-    $directories = Storage::disk('root')->directories('themes');
+    //$directories = Storage::disk('root')->directories('themes');
+    $directories = File::directories(public_path('themes'));
 
-    //clean up directory names
-    array_walk($directories, function (&$value, $key) {
-        $value = str_replace('themes/', '', $value);
-    });
 
-    //check if default theme exists
-    if (!in_array($settings->settings_theme_name, $directories)) {
-        Log::critical("The selected theme directory could not be found", ['process' => '[validating theme]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__, 'Theme Directory: ' => '/themes/' . $settings->settings_theme_name]);
-        abort(409, __('lang.default_theme_not_found') . ' [' . runtimeThemeName($settings->settings_theme_name) . ']');
+    // Extract theme names from full paths
+    $themeNames = array_map(fn($dir) => basename($dir), $directories);
+
+    // Check if the selected theme exists
+    if (!in_array($settings->settings_theme_name, $themeNames)) {
+        Log::critical("The selected theme directory could not be found", [
+            'Theme Directory' => public_path('themes/' . $settings->settings_theme_name),
+        ]);
+        abort(409, __('lang.default_theme_not_found') . ' [' . $settings->settings_theme_name . ']');
     }
 
-    //check if css file exists
-    if (!is_file(BASE_DIR . '/themes/' . $settings->settings_theme_name . '/css/style.css')) {
-        Log::critical("The selected theme does not seem to have a style.css files", ['process' => '[validating theme]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__, 'Theme Directory: ' => '/themes/' . $settings->settings_theme_name]);
+    // Validate if the theme's `style.css` exists
+    if (!File::exists(public_path('themes/' . $settings->settings_theme_name . '/css/style.css'))) {
+        Log::critical("The selected theme does not have a style.css file", [
+            'Theme Directory' => public_path('themes/' . $settings->settings_theme_name),
+        ]);
         abort(409, __('lang.selected_theme_is_invalid'));
     }
 
-    //validate if the folders in the /public/themes/ directory have a style.css file
-    $list = [];
-    foreach ($directories as $directory) {
-        if (is_file(BASE_DIR . "/themes/$directory/css/style.css")) {
-            $list[] = $directory;
-        }
-    }
+    // Validate all available themes (only include themes that have a `style.css` file)
+    $validThemes = array_filter($themeNames, function ($theme) {
+        return File::exists(public_path("themes/{$theme}/css/style.css"));
+    });
 
-    //set global theme (used for users who are not logged in)
-    config([
-        'theme.list' => $list,
+
+     // Set global theme configuration
+     config([
+        'theme.list' => $validThemes,
         'theme.selected_name' => $settings->settings_theme_name,
-        //main css file
-        'theme.selected_theme_css' => 'themes/' . $settings->settings_theme_name . '/css/style.css?v=' . $settings->settings_system_javascript_versioning,
-        //invoice/estimate pdf (web preview)
-        //[8 Aug 2021] all themes should now use the 'default' theme's bill-pdf.css file (themes/default/css/bill-pdf.css)
-        'theme.selected_theme_pdf_css' => 'themes/default/css/bill-pdf.css?v=' . $settings->settings_system_javascript_versioning,
-        //[MT]
-        'theme.selected_theme_saas_css' => 'themes/' . $settings->settings_theme_name . '/css/saas.css?v=' . $settings->settings_system_javascript_versioning,
+        'theme.selected_theme_css' => asset('themes/' . $settings->settings_theme_name . '/css/style.css?v=' . $settings->settings_system_javascript_versioning),
+        'theme.selected_theme_pdf_css' => asset('themes/default/css/bill-pdf.css?v=' . $settings->settings_system_javascript_versioning),
+        'theme.selected_theme_saas_css' => asset('themes/' . $settings->settings_theme_name . '/css/saas.css?v=' . $settings->settings_system_javascript_versioning),
     ]);
 
-    //[user custom theme] - set the theme for the current user (apply to all views)
-    view()->composer('*', function ($view) {
+    // Apply user-specific theme preference
+    view()->composer('*', function ($view) use ($settings) {
         if (auth()->check()) {
-            //validate current theme
-            if (!is_file(BASE_DIR . '/themes/' . auth()->user()->pref_theme . '/css/style.css')) {
-                //set use to default system theme
+            $userTheme = auth()->user()->pref_theme;
+
+            // Ensure user theme is valid; otherwise, reset to default
+            if (!File::exists(public_path("themes/{$userTheme}/css/style.css"))) {
                 auth()->user()->pref_theme = $settings->settings_theme_name;
                 auth()->user()->save();
             }
         }
     });
+    
 }
