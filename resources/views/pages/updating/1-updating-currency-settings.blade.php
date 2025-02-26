@@ -1,5 +1,5 @@
 <div class="splash-image" id="updatePasswordSplash">
-    <img src="{{ url('/') }}/public/images/finish-setup.svg" alt="Finish Updating" />
+    <img src="{{ url('/') }}/images/finish-setup.svg" alt="Finish Updating" />
 </div>
 <div class="splash-text">
     <h3>@lang('lang.update_settings')</h3>

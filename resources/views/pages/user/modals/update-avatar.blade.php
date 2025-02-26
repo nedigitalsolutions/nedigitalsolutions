@@ -1,5 +1,5 @@
 <div class="splash-image" id="updatePasswordSplash">
-    <img src="{{ url('/') }}/public/images/update-avatar.png" alt="update avatar" />
+    <img src="{{ url('/') }}/images/update-avatar.png" alt="update avatar" />
 </div>
 <div class="splash-text">
     {{ cleanLang(__('lang.update_your_profile_picture')) }}

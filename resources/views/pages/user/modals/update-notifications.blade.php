@@ -1,5 +1,5 @@
 <div class="splash-image" id="updatePasswordSplash">
-    <img src="{{ url('/') }}/public/images/notifications.png" alt="404 - Not found" />
+    <img src="{{ url('/') }}/images/notifications.png" alt="404 - Not found" />
 </div>
 <div class="splash-text">
     {{ cleanLang(__('lang.notify_me_about_these_events')) }}

@@ -1,5 +1,5 @@
 <div class="splash-image" id="updatePasswordSplash">
-    <img src="{{ url('/') }}/public/images/theme.svg" alt="404 - Not found" />
+    <img src="{{ url('/') }}/images/theme.svg" alt="404 - Not found" />
 </div>
 <div class="splash-text">
     {{ cleanLang(__('lang.change_theme')) }}

@@ -58,7 +58,7 @@
         <!--no records found-->
         <div class="splash-message m-t-40">
             <div class="splash-image">
-                <img src="{{ url('/') }}/public/images/records-not-found.svg" alt="404 - Not found" />
+                <img src="{{ url('/') }}/images/records-not-found.svg" alt="404 - Not found" />
             </div>
             <div class="splash-text">
                 @lang('lang.no_payments_found')

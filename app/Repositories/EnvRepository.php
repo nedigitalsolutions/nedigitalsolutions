@@ -22,7 +22,7 @@ class EnvRepository {
      */
     public function __construct() {
 
-        $this->env_file_path = BASE_DIR . '/application/.env';
+        $this->env_file_path = BASE_DIR . '/home/forge/nedigitalsolutions.com/.env';
 
         //validate
         if (!is_writable($this->env_file_path) || !is_file($this->env_file_path)) {

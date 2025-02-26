@@ -22,7 +22,7 @@
 
     <!--server error-->
     <div class="updates-card m-t-10 hidden" id="updates-server-error">
-        <img src="{{ url('/') }}/public/images/server-communication-error.png"
+        <img src="{{ url('/') }}/images/server-communication-error.png"
             alt="{{ cleanLang(__('lang.error_communicating_updates_server')) }}" />
         <div class="x-message">
             <h3>{{ cleanLang(__('lang.error_communicating_updates_server')) }}</h3>
@@ -44,7 +44,7 @@
 
     <!--app version error-->
     <div class="updates-card m-t-10 hidden" id="updates-app-version-error">
-        <img src="{{ url('/') }}/public/images/error-app-version.png"
+        <img src="{{ url('/') }}/images/error-app-version.png"
             alt="{{ cleanLang(__('lang.error_communicating_updates_server')) }}" />
         <div class="x-message">
             <h3>{{ cleanLang(__('lang.app_version_could_not_be_veried')) }}</h3>
@@ -57,7 +57,7 @@
 
     <!--no updates avialable-->
     <div class="updates-card m-t-10 hidden" id="updates-none-available">
-        <img src="{{ url('/') }}/public/images/no-download-avialble.png" alt="No updates available" />
+        <img src="{{ url('/') }}/images/no-download-avialble.png" alt="No updates available" />
         <div class="x-message m-t-5">
             <h3>{{ cleanLang(__('lang.no_updates_available')) }}</h3>
         </div>
@@ -83,7 +83,7 @@
 
     <!--updates avialable-->
     <div class="updates-card m-t-10 hidden" id="updates-available">
-        <img src="{{ url('/') }}/public/images/download-available.png" alt="updates available" />
+        <img src="{{ url('/') }}/images/download-available.png" alt="updates available" />
         <div class="m-t-20">
             <h3>{{ cleanLang(__('lang.new_updates_available')) }}</h3>
         </div>

@@ -108,7 +108,7 @@
 
 @else
 <div class="splash-image" id="updatePasswordSplash">
-    <img src="{{ url('/') }}/public/images/products-not-found.svg" alt="404 - Not found" />
+    <img src="{{ url('/') }}/images/products-not-found.svg" alt="404 - Not found" />
 </div>
 <div class="splash-text p-b-30">
     @lang('lang.stripe_products_not_found')
@@ -122,7 +122,7 @@
 <!--error connecting to stripe-->
 @if($show == 'error')
 <div class="splash-image" id="updatePasswordSplash">
-    <img src="{{ url('/') }}/public/images/general-error.png" alt="404 - Not found" />
+    <img src="{{ url('/') }}/images/general-error.png" alt="404 - Not found" />
 </div>
 <div class="splash-text">
     {{ $message }}
@@ -134,7 +134,7 @@
 <!--error connecting to stripe-->
 @if($show == 'no-products')
 <div class="splash-image" id="updatePasswordSplash">
-    <img src="{{ url('/') }}/public/images/products-not-found.svg" alt="404 - Not found" />
+    <img src="{{ url('/') }}/images/products-not-found.svg" alt="404 - Not found" />
 </div>
 <div class="splash-text p-b-30">
     @lang('lang.stripe_products_not_found')

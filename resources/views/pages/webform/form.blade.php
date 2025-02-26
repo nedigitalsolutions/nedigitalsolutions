@@ -61,7 +61,7 @@
 
         <!--error message-->
         <div class="page-notification hidden" id="webform-system-error">
-            <img class="m-b-30" src="{{ url('/') }}/public/images/404.png" alt="404 - Not found" />
+            <img class="m-b-30" src="{{ url('/') }}/images/404.png" alt="404 - Not found" />
             <h3 class="m-b-30 font-weight-200"> @lang('lang.application_error') </h3>
         </div>
 

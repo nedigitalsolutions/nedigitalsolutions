@@ -1,7 +1,7 @@
     <div class="subscription-pay-now">
 
         <div class="x-splash">
-            <img src="{{ url('/') }}/public/images/credit-card.svg" alt="pay" />
+            <img src="{{ url('/') }}/images/credit-card.svg" alt="pay" />
         </div>
 
         <div class="x-plan">
@@ -20,7 +20,7 @@
         </div>
 
         <div class="x-cards">
-            <img src="{{ url('/') }}/public/images/credit-cards.png" alt="pay" />
+            <img src="{{ url('/') }}/images/credit-cards.png" alt="pay" />
         </div>
 
         <!--STRIPE REDIRECT-->

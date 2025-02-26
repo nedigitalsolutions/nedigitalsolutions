@@ -37,4 +37,4 @@
 <!--js dom elements-->
 @include('pages.task.components.js-elements')
 
-<script src="public/js/core/card.js?v={{ config('system.versioning') }}"></script>
+<script src="js/core/card.js?v={{ config('system.versioning') }}"></script>

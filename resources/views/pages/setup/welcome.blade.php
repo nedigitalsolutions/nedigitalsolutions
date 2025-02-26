@@ -2,7 +2,7 @@
 
     <!--image-->
     <div class="x-image">
-        <img src="public/images/wizard.png">
+        <img src="images/wizard.png">
     </div>
 
     <!--title-->
